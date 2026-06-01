@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio BUT3 — Mélina Galland</title>
+  <meta name="description" content="Portfolio BUT3 — Mélina Galland — Marketing digital & e‑entrepreneuriat (MDEE), alternance." />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap)" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg-soft:#f6f3ee;      /* beige très clair */
+      --card:#ffffff;
+      --text:#2b2b2b;
+      --muted:#6f6a64;        /* taupe/gris chaud */
+      --accent:#9a7c61;       /* taupe soutenu */
+      --border:#e6e0d8;
+      --tag:#f1ece5;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border)}
+    .wrap{max-width:1040px;margin:0 auto}
+    .nav{padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block}
+    .nav a{margin-left:12px;font-weight:600;color:var(--text)}
+    main{padding:28px 20px 80px}
+    h1{font-size:34px;line-height:1.2;margin:0 0 8px}
+    h2{font-size:22px;margin:28px 0 12px}
+    h3{font-size:18px;margin:18px 0 8px}
+    p.lead{color:var(--muted);margin:0 0 16px}
+    .tag{display:inline-block;background:var(--tag);border:1px solid var(--border);border-radius:999px;padding:6px 12px;font-size:14px;margin:4px 6px 0 0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 1px 0 rgba(0,0,0,0.02)}
+    .muted{color:var(--muted)}
+    .btn{display:inline-block;background:var(--accent);color:#fff;border-radius:10px;padding:10px 14px;font-weight:600}
+    .btn.secondary{background:#fff;color:var(--text);border:1px solid var(--border)}
+    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:center;margin-top:10px}
+    .portrait{width:100%;max-width:360px;border-radius:16px;border:1px solid var(--border);background:var(--bg-soft);object-fit:cover;aspect-ratio:1/1}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .kpis{display:flex;gap:18px;flex-wrap:wrap;margin-top:6px}
+    .kpi{background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:#fff;font-size:13px;margin:4px 6px 0 0;color:var(--muted)}
+    .comp-card .head{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+    .list{margin:8px 0 0 0;padding:0 0 0 18px}
+    .real{border-left:3px solid var(--accent);padding-left:10px;margin:10px 0}
+    .real small{color:var(--muted)}
+    section.alt{background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;padding:18px}
+    .flex{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .qr{width:120px;height:120px;border:1px solid var(--border);border-radius:10px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px}
+    .footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid,.grid-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand"><span class="dot"></span> Mélina Galland</div>
+        <nav>
+          <a href="#intro">Accueil</a>
+          <a href="#competences">Compétences</a>
+          <a href="#realisations">Réalisations</a>
+          <a href="#projet">Projet Post-BUT</a>
+          <a href="#cvvideo">CV‑vidéo</a>
+          <a href="[drive.google.com](https://drive.google.com/file/d/1reNsOIcLhx-vzsWBqjQuHqzxhh2_ai-7/view)" target="_blank" rel="noopener">Ouvrir CV‑vidéo</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section id="intro" class="hero">
+      <div>
+        <h1>Marketing digital & e‑entrepreneuriat — Alternance</h1>
+        <p class="lead">
+          Étudiante en BUT3 Techniques de Commercialisation (parcours MDEE) — IUT Robert Schuman, Strasbourg.
+          Orientée résultats: croissance social media, contenus performants, campagnes digitales et activation en point de vente.
+        </p>
+        <div>
+          <span class="tag">+3000 abonnés (Cuisinella/Schmidt)</span>
+          <span class="tag">+10 000 abonnés (Le Choka)</span>
+          <span class="tag">150 000+ vues campagnes</span>
+          <span class="tag">TOEIC 925</span>
+        </div>
+        <div style="margin-top:12px">
+          <a class="btn" href="#competences">Voir les compétences</a>
+        </div>
+      </div>
+      <div class="card" style="text-align:center">
+        <img class="portrait" src="photo.jpg" alt="Mélina Galland — portrait professionnel" />
+        <p class="muted" style="margin-top:10px">Mélina Galland</p>
+      </div>
+    </section>
+
+    <!-- EN BREF -->
+    <section class="alt" aria-labelledby="breve">
+      <div class="card" style="margin:0">
+        <h3 id="breve">En bref</h3>
+        <ul class="list">
+          <li>Alternance — Responsable communication, Groupe Erhart (Cuisinella & Schmidt), Strasbourg, 2025–2026.</li>
+          <li>Stages: Le Choka Restaurant (La Réunion) et Domaine du Château Burrus (Alsace).</li>
+          <li>Parcours: Business International → MDEE (marketing digital), focus performance.</li>
+          <li>Ouverture internationale: CÉGEP Garneau (QC) et séjour académique à CSULB (USA).</li>
+        </ul>
+        <div class="kpis">
+          <div class="kpi"><strong>+250 000</strong> vues sociales (campagnes)</div>
+          <div class="kpi"><strong>+1 000</strong> abonnés (Burrus)</div>
+          <div class="kpi"><strong>325 000</strong> visiteurs (Foire aux Vins)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="competences">
+      <h2>Compétences (1 page par bloc)</h2>
+      <p class="muted">Structure exigée: présentation → apprentissages/sous‑compétences → 3 réalisations commentées reliées à mon projet post‑BUT.</p>
+
+      <!-- Bloc 1 -->
+      <article class="card comp-card" id="comp-marketing-digital">
+        <div class="head">
+          <h3>Marketing digital et social media</h3>
+          <span class="pill">Bloc MDEE</span>
+        </div>
+        <p>Concevoir et piloter des stratégies de contenu organique/payant pour générer portée, engagement et trafic, au service d’objectifs commerciaux.</p>
+        <strong>Apprentissages / sous‑compétences</strong>
+        <ul class="list">
+          <li>Stratégie éditoriale, calendrier social, cohérence de marque.</li>
+          <li>Production de contenus (Canva, CapCut), formats courts, UGC.</li>
+          <li>KPI et optimisation data‑driven (portée, vues, CTR, conversions).</li>
+        </ul>
+        <strong>Réalisations (max 3)</strong>
+        <div class="real">
+          <p><b>R1 — Croissance +3000 abonnés (Erhart)</b><br>
+          Commentaire: thèmes cuisine/avant‑après, UGC local, répétition des formats performants. Lien apprentissages: stratégie éditoriale + analyse KPI. Lien projet post‑BUT: approfondir paid social pour scaler.</p>
+          <small>Outils: Canva, CapCut, Meta Suite. 2025–2026.</small>
+        </div>
+        <div class="real">
+          <p><b>R2 — 150 000+ vues campagnes</b><br>
+          Commentaire: tests A/B des hooks 3s, ratio vertical, CTA clair. Moins bien: formats trop longs. Solution: protocole de test créa x audience, doc de learnings.</p>
+        </div>
+        <div class="real">
+          <p><b>R3 — +10 000 abonnés en 3 mois (Le Choka)</b><br>
+          Commentaire: stratégie locale (UGC, événements, collabs micro‑influenceurs). Transposabilité: retail/restauration multi‑sites.</p>
+        </div>
+        <em class="muted">Commentaire global: compétence opérationnelle et transférable; objectif: muscler l’acquisition payante et l’attribution.</em>
+      </article>
+
+      <!-- Bloc 2 -->
+      <article class="card comp-card" id="comp-communication-360">
+        <div class="head">
+          <h3>Communication 360 et activation commerciale</h3>
+          <span class="pill">Bloc MDEE</span>
+        </div>
+        <p>Déployer des actions intégrées on/offline pour soutenir visibilité et conversion en point de vente.</p>
+        <strong>Apprentissages / sous‑compétences</strong>
+        <ul class="list">
+          <li>Plan de communication, calendrier d’activation.</li>
+          <li>Coordination d’événements et partenariats locaux.</li>
+          <li>Mesure d’impact magasin (trafic, leads, ventes).</li>
+        </ul>
+        <strong>Réalisations (max 3)</strong>
+        <div class="real">
+          <p><b>R1 — Opérations spéciales & privatisations (Le Choka)</b><br>
+          Thématiques claires, teasing vidéo court. À améliorer: relais presse anticipé. Action: check‑list D‑30/D‑7/J.</p>
+        </div>
+        <div class="real">
+          <p><b>R2 — Partenariats haut de gamme (Château Burrus)</b><br>
+          Positionnement premium via shootings d’inspiration; valorisation auprès d’acteurs événementiels.</p>
+        </div>
+        <div class="real">
+          <p><b>R3 — Alignement com/vente (Erhart)</b><br>
+          Supports dédiés, scripts d’accueil. Piste: boucle d’amélioration via feedback vendeurs.</p>
+        </div>
+        <em class="muted">Commentaire global: connexion visibilité ↔ terrain, approche test & learn.</em>
+      </article>
+
+      <!-- Bloc 3 -->
+      <article class="card comp-card" id="comp-analyse-kpi">
+        <div class="head">
+          <h3>Analyse de performance et prise de recul</h3>
+          <span class="pill">Bloc commun</span>
+        </div>
+        <p>Identifier les écarts attendus/réel, qualifier forces/axes d’amélioration et proposer des solutions concrètes (fonction régulatrice).</p>
+        <strong>Apprentissages / sous‑compétences</strong>
+        <ul class="list">
+          <li>Objectifs SMART et mapping KPI.</li>
+          <li>Reporting clair et recommandations actionnables.</li>
+          <li>Itérations créatives et média basées données.</li>
+        </ul>
+        <strong>Réalisations (max 3)</strong>
+        <div class="real">
+          <p><b>R1 — Dashboards social media</b><br>
+          Points forts: fréquence, lisibilité, reco. À améliorer: coûts par résultat. Solution: gabarit standardisé avec KPI de coût.</p>
+        </div>
+        <div class="real">
+          <p><b>R2 — Post‑mortem campagne</b><br>
+          Interprétation → critique → régulatrice: hypothèses sur hooks, créa alternative, plan de test en 2 sprints.</p>
+        </div>
+        <div class="real">
+          <p><b>R3 — A/B tests</b><br>
+          Une variable à la fois, seuils d’impressions, décision documentée.</p>
+        </div>
+        <em class="muted">Commentaire global: mesure → décision → amélioration continue.</em>
+      </article>
+    </section>
+
+    <!-- RÉALISATIONS CLÉS -->
+    <section id="realisations" class="alt">
+      <h2>Réalisations clés (sélection)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Stratégie social media — Le Choka</h3>
+          <p class="muted">Structuration de la présence, +10 000 abonnés, 250 000+ vues. UGC, formats courts, calendrier d’événements.</p>
+          <div class="kpis"><div class="kpi"><strong>+10 000</strong> abonnés</div><div class="kpi"><strong>250 000+</strong> vues</div></div>
+        </div>
+        <div class="card">
+          <h3>Campagnes — Erhart (Cuisinella & Schmidt)</h3>
+          <p class="muted">Création et déploiement orientés conversion en PDV. +3000 abonnés et 150 000+ vues.</p>
+          <div class="kpis"><div class="kpi"><strong>+3000</strong> abonnés</div><div class="kpi"><strong>150 000+</strong> vues</div></div>
+        </div>
+        <div class="card">
+          <h3>Positionnement premium — Château Burrus</h3>
+          <p class="muted">Shooting d’inspiration, partenariats, contenus premium pour segment haut de gamme.</p>
+          <div class="kpis"><div class="kpi"><strong>+1 000</strong> abonnés</div><div class="kpi"><strong>20 000+</strong> vues</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJET POST-BUT -->
+    <section id="projet">
+      <h2>Projet post‑BUT</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Objectif</h3>
+          <p>Poursuivre en école de commerce (admissions sur titre Bac+3) avec spécialisation marketing digital/brand content, en alternance.</p>
+          <p class="muted">Ciblage PGE proposant AST (Tremplin/Passerelle/AST propres). Prise en compte des coûts et modalités.</p>
+        </div>
+        <div class="card">
+          <h3>Compétences à approfondir</h3>
+          <ul class="list">
+            <li>Paid social & attribution (UTM, modèles d’attribution, ROAS).</li>
+            <li>Brand strategy et content factory multi‑plateformes.</li>
+            <li>Gestion de projet cross‑fonctions et pilotage budget.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV VIDÉO -->
+    <section id="cvvideo" class="alt">
+      <h2>CV‑vidéo</h2>
+      <div class="flex card" style="margin:0">
+        <div style="flex:1 1 360px">
+          <p class="muted">Présentation synthétique de mon profil, de mes compétences et de mon projet post‑BUT.</p>
+          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:1px solid var(--border)">
+            <iframe
+              src="[drive.google.com](https://drive.google.com/file/d/1reNsOIcLhx-vzsWBqjQuHqzxhh2_ai-7/preview)"
+              allow="autoplay"
+              allowfullscreen
+              title="CV‑vidéo — Mélina Galland"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0">
+            </iframe>
+          </div>
+          <p style="margin-top:8px">
+            <a class="btn secondary" href="[drive.google.com](https://drive.google.com/file/d/1reNsOIcLhx-vzsWBqjQuHqzxhh2_ai-7/view)" target="_blank" rel="noopener">Ouvrir dans Google Drive</a>
+          </p>
+        </div>
+        <div style="flex:0 0 140px;text-align:center">
+          <div class="qr" id="qr">QR code</div>
+          <p class="muted" style="font-size:12px;margin-top:6px">Scanner pour voir la vidéo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours">
+      <h2>Parcours</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Expériences</h3>
+          <ul class="list">
+            <li><b>Responsable communication (apprentissage)</b> — Groupe Erhart (Cuisinella & Schmidt), Strasbourg, 09/2025–09/2026.</li>
+            <li><b>Community Manager (stage)</b> — Le Choka Restaurant, La Réunion, 04/2025–06/2025.</li>
+            <li><b>Community Manager (stage)</b> — Domaine du Château Burrus, 04/2024–05/2024.</li>
+            <li><b>Barmaid (saisonnier)</b> — Foire aux Vins de Colmar, 2023–2025.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Formation</h3>
+          <ul class="list">
+            <li><b>BUT TC</b> — IUT Robert Schuman, parcours MDEE, 2023–2026.</li>
+            <li><b>Échange</b> — CÉGEP Garneau (QC), S3 Gestion de commerce, 08–12/2024.</li>
+            <li><b>Séjour académique</b> — CSULB (USA), Education First, 2022.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Compétences & langues</h3>
+          <p><b>Outils:</b> Canva, CapCut, Pack Office (Excel, Word, PowerPoint)</p>
+          <p><b>Langues:</b> Français (natif), Anglais (TOEIC 925), Espagnol (A2)</p>
+          <p><b>Centres d’intérêt:</b> voyage, cinéma, musique, lecture, photographie</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="alt">
+      <h2>Contact</h2>
+      <div class="card" style="margin:0">
+        <p><b>Mélina Galland</b></p>
+        <p>Strasbourg, France</p>
+        <p><a href="tel:+33781960412">07 81 96 04 12</a> — <a href="mailto:melina.galland.pro@gmail.com">melina.galland.pro@gmail.com</a></p>
+      </div>
+      <div class="footer">
+        Portfolio orienté recruteurs — structure “1 page par bloc de compétence” avec réalisations commentées et prise de recul.
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // QR code pour la vidéo (Drive)
+    const cvVideoURL = "[drive.google.com](https://drive.google.com/file/d/1reNsOIcLhx-vzsWBqjQuHqzxhh2_ai-7/view)";
+    const qrEl = document.getElementById("qr");
+    if (qrEl && cvVideoURL) {
+      const api = "[api.qrserver.com](https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=)" + encodeURIComponent(cvVideoURL);
+      const img = new Image();
+      img.alt = "QR code CV‑vidéo";
+      img.width = 120; img.height = 120;
+      img.src = api;
+      qrEl.textContent = "";
+      qrEl.appendChild(img);
+    }
+  </script>
+</body>
+</html>
