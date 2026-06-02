@@ -238,15 +238,30 @@
       gap: 40px;
       flex-wrap: wrap;
     }
-    .school-logos img {
-      max-width: 280px;
-      max-height: 130px;
-      object-fit: contain;
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+ .school-logos {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.school-logos img {
+    width: 180px;
+    height: 120px;
+    object-fit: contain;
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: 0.3s ease;
+}
+
+.school-logos img:hover {
+    transform: translateY(-5px);
+}
     }
     .timeline {
       display: grid;
@@ -604,10 +619,25 @@
       </p>
     </div>
   </div>
-  <div class="school-logos">
-    <img src="./IMG_7598.PNG" alt="Logo NEOMA Business School">
-    <img src="./IMG_7597.PNG" alt="Logo KEDGE Business School">
-  </div>
+  <p style="text-align:center;margin-top:40px;color:var(--muted);">
+  Les écoles que je vise pour poursuivre mes études ainsi que les entreprises
+  dans lesquelles j’ambitionne d’évoluer à long terme.
+</p>
+ <div class="school-logos">
+
+    <img src="./IMG_7598.PNG"
+         alt="Logo NEOMA Business School">
+
+    <img src="./IMG_7597.PNG"
+         alt="Logo KEDGE Business School">
+
+    <img src="./IMG_7607.PNG"
+         alt="Logo Netflix">
+
+    <img src="./IMG_7606.JPG"
+         alt="Logo Warner Bros">
+
+</div>
 </section>
 <section id="parcours">
   <div class="section-title">
