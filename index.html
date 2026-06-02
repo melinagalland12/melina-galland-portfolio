@@ -57,9 +57,9 @@
     }
     .nav-links {
       display: flex;
-      gap: 22px;
+      gap: 20px;
       list-style: none;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
     }
     .nav-links a {
       color: var(--muted);
@@ -120,6 +120,7 @@
       border: 2px solid var(--primary);
       transition: 0.2s ease;
       font-size: 0.92rem;
+      margin-top: 8px;
     }
     .btn-primary {
       background: var(--primary);
@@ -175,7 +176,7 @@
       margin-bottom: 12px;
     }
     .section-title p {
-      max-width: 850px;
+      max-width: 880px;
       color: var(--muted);
       font-size: 1.05rem;
     }
@@ -228,6 +229,24 @@
     .card ul {
       padding-left: 18px;
       margin-top: 12px;
+    }
+    .school-logos {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .school-logos img {
+      max-width: 280px;
+      max-height: 130px;
+      object-fit: contain;
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
     .timeline {
       display: grid;
@@ -373,6 +392,9 @@
       .skills {
         grid-template-columns: 1fr;
       }
+      .school-logos img {
+        max-width: 230px;
+      }
     }
   </style>
 </head>
@@ -383,6 +405,7 @@
     <ul class="nav-links">
       <li><a href="#profil">Profil</a></li>
       <li><a href="#projet">Projet</a></li>
+      <li><a href="#ecoles">PGE</a></li>
       <li><a href="#parcours">Parcours</a></li>
       <li><a href="#productions">Productions</a></li>
       <li><a href="#competences">Compétences</a></li>
@@ -418,7 +441,7 @@
     </div>
   </div>
   <div class="hero-photo-card">
-    <img src="./photo.jpg" alt="Photo professionnelle de Mélina Galland">
+    <img src="./moi.jpg.jpeg" alt="Photo professionnelle de Mélina Galland">
     <h2>Profil</h2>
     <p>
       Communication digitale · Marketing · Création de contenu · Ouverture internationale
@@ -432,7 +455,9 @@
     <p>
       Passionnée par les voyages, la communication, la photographie, le cinéma et la lecture,
       j’aime comprendre les comportements, raconter une histoire de marque et créer des
-      contenus capables de générer de l’engagement.
+      contenus capables de générer de l’engagement. Mon parcours universitaire et mes
+      expériences professionnelles m’ont permis de développer une approche à la fois créative,
+      commerciale et stratégique.
     </p>
   </div>
   <div class="stats">
@@ -487,7 +512,9 @@
       <p>
         Une école de commerce représente pour moi la suite logique de mon parcours.
         Elle me permettrait de passer d’une approche opérationnelle du marketing à une
-        vision plus stratégique, managériale et internationale.
+        vision plus stratégique, managériale et internationale. Je souhaite apprendre à
+        piloter des projets, analyser des marchés, comprendre les enjeux commerciaux et
+        coordonner des équipes dans des environnements exigeants.
       </p>
     </div>
     <div class="card">
@@ -495,7 +522,8 @@
       <p>
         J’apporte un profil déjà professionnalisé, avec des expériences concrètes en
         communication digitale, événementiel, relation client, création de contenu et
-        analyse de performance.
+        analyse de performance. Mon parcours montre ma capacité à m’adapter, à prendre
+        des initiatives et à transformer une idée en action concrète.
       </p>
     </div>
     <div class="card">
@@ -508,10 +536,84 @@
     </div>
   </div>
 </section>
+<section id="ecoles">
+  <div class="section-title">
+    <p class="eyebrow">Formations visées</p>
+    <h2>Pourquoi NEOMA et KEDGE ?</h2>
+    <p>
+      Mon choix de viser NEOMA Business School et KEDGE Business School s’inscrit dans
+      une ambition claire : intégrer une grande école de commerce reconnue, ouverte sur
+      l’international, afin de construire un parcours cohérent avec mon objectif professionnel
+      dans la communication, le marketing et la production commerciale au sein d’un grand
+      groupe international.
+    </p>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Pourquoi NEOMA ?</h3>
+      <p>
+        NEOMA représente pour moi une école ambitieuse, tournée vers l’international,
+        l’innovation et la professionnalisation. Son Programme Grande École correspond
+        à mon objectif de développer une vision stratégique du marketing et de la
+        communication, tout en renforçant mes compétences managériales.
+      </p>
+      <p>
+        Intégrer NEOMA serait l’opportunité de construire un parcours exigeant, capable
+        de me préparer à des environnements professionnels compétitifs. Cette école
+        correspond à mon ambition d’évoluer dans des groupes à forte visibilité, où la
+        marque, le contenu, l’expérience client et la stratégie commerciale sont au cœur
+        de la performance.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Pourquoi KEDGE ?</h3>
+      <p>
+        KEDGE m’attire par son positionnement dynamique, son ouverture sur le monde et
+        son approche concrète des enjeux actuels du management. Son Programme Grande
+        École correspond à mon envie de travailler sur des projets ambitieux, créatifs,
+        responsables et connectés aux réalités économiques internationales.
+      </p>
+      <p>
+        Intégrer KEDGE me permettrait d’approfondir mes compétences en marketing,
+        communication, management de projet et stratégie commerciale. Cette école
+        serait un tremplin pour apprendre à piloter une marque, comprendre un marché,
+        coordonner des équipes et construire des projets à dimension internationale.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Ce que je veux y développer</h3>
+      <p>
+        En intégrant un PGE, je souhaite passer d’un profil opérationnel à un profil plus
+        stratégique. Mes expériences m’ont déjà permis de créer du contenu, gérer des
+        réseaux sociaux, analyser des performances et participer à des projets commerciaux.
+        Mon objectif est désormais de prendre de la hauteur pour apprendre à piloter une
+        stratégie globale.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Mon ambition à long terme</h3>
+      <p>
+        À terme, je souhaite évoluer dans un grand groupe international du divertissement,
+        des médias ou de la production commerciale, comme Netflix ou Warner Bros. Je veux
+        travailler sur des projets à forte visibilité, capables de toucher un public large,
+        international et exigeant, en combinant stratégie de marque, communication,
+        créativité et performance commerciale.
+      </p>
+    </div>
+  </div>
+  <div class="school-logos">
+    <img src="./IMG_7598.PNG" alt="Logo NEOMA Business School">
+    <img src="./IMG_7597.PNG" alt="Logo KEDGE Business School">
+  </div>
+</section>
 <section id="parcours">
   <div class="section-title">
     <p class="eyebrow">Parcours</p>
     <h2>Expériences professionnelles et formation</h2>
+    <p>
+      Mon parcours associe formation commerciale, expériences professionnelles,
+      communication digitale, événementiel et ouverture internationale.
+    </p>
   </div>
   <div class="timeline">
     <div class="timeline-item">
@@ -520,7 +622,8 @@
       <p>
         Alternance au sein d’un groupe concessionnaire de magasins Cuisinella et Schmidt.
         Création de contenus, campagnes digitales, analyse des performances et soutien
-        aux actions commerciales.
+        aux actions commerciales. Cette expérience me permet de développer une approche
+        concrète de la communication au service de la visibilité et de la performance commerciale.
       </p>
     </div>
     <div class="timeline-item">
@@ -529,7 +632,8 @@
       <p>
         Structuration de la stratégie de communication digitale, gestion des réseaux sociaux,
         création de contenus, communication événementielle et valorisation de l’image
-        du restaurant.
+        du restaurant. Cette expérience m’a permis d’évoluer dans une entreprise jeune,
+        en forte croissance, avec un fort enjeu d’image et de notoriété.
       </p>
     </div>
     <div class="timeline-item">
@@ -538,6 +642,8 @@
       <p>
         Valorisation d’un lieu événementiel haut de gamme, coordination d’un shooting
         d’inspiration, création de contenus et développement de la visibilité du domaine.
+        Cette expérience m’a permis de développer mon sens esthétique, mon organisation
+        et ma capacité à valoriser une marque à travers une identité visuelle cohérente.
       </p>
     </div>
     <div class="timeline-item">
@@ -553,7 +659,8 @@
       <h3>Échange universitaire — CEGEP Garneau, Québec</h3>
       <p>
         Semestre d’études au Canada en gestion de commerce, marketing et communication,
-        renforçant mon ouverture internationale et mon adaptabilité.
+        renforçant mon ouverture internationale, mon adaptabilité et ma capacité à évoluer
+        dans un environnement multiculturel.
       </p>
     </div>
   </div>
@@ -690,7 +797,9 @@
     <h2>Les compétences que je souhaite mettre au service de mon projet</h2>
     <p>
       Ces compétences ont été développées à travers mes expériences professionnelles,
-      mes projets universitaires, mes stages et mes engagements personnels.
+      mes projets universitaires, mes stages et mes engagements personnels. Elles
+      constituent les bases de mon projet post-BUT et de mon ambition d’évoluer dans
+      un grand groupe international.
     </p>
   </div>
   <div class="skills">
