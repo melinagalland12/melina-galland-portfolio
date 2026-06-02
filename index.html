@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Mélina Galland</title>
+
+  <style>
+    :root {
+      --bg: #f8f5f0;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: #6f6f6f;
+      --primary: #8a5a44;
+      --primary-dark: #5f3b2e;
+      --secondary: #d8bfa7;
+      --accent: #efe3d6;
+      --border: #e3d8ce;
+      --shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 90px 24px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 60px;
+      padding-top: 130px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1;
+      color: var(--primary-dark);
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 2px solid var(--primary);
+      margin-top: 10px;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      color: var(--primary-dark);
+      background: transparent;
+      font-size: 0.9rem;
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent);
+    }
+
+    .hero-card,
+    .card,
+    .skill-card,
+    .production-card,
+    .timeline-item,
+    .stat {
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card {
+      border-radius: 28px;
+      padding: 35px;
+    }
+
+    .hero-card h2 {
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-card li {
+      background: var(--bg);
+      padding: 14px 16px;
+      border-radius: 16px;
+      color: var(--muted);
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 35px;
+    }
+
+    .stat {
+      padding: 24px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--primary);
+      font-size: 2rem;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin-top: 12px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 22px;
+    }
+
+    .timeline-item {
+      border-left: 5px solid var(--primary);
+      padding: 24px;
+      border-radius: 18px;
+    }
+
+    .timeline-item .date {
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item h3 {
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+    }
+
+    .productions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .production-card {
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .production-img {
+      height: 175px;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .production-content {
+      padding: 24px;
+      flex: 1;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .production-content h3 {
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .production-content p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .skill-card {
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .skill-card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .contact-box {
+      background: var(--primary-dark);
+      color: white;
+      border-radius: 28px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .contact-box p {
+      color: #f2e7dc;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-details div {
+      background: rgba(255,255,255,0.1);
+      padding: 14px 16px;
+      border-radius: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 24px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid-2,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .stats,
+      .productions,
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 18px;
+      }
+
+      .stats,
+      .productions,
+      .skills {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="#accueil" class="logo">Mélina Galland</a>
+    <ul class="nav-links">
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#projet">Projet</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#productions">Productions</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section id="accueil" class="hero">
+  <div>
+    <span class="badge">BUT TC · Parcours MDEE · IUT Robert Schuman</span>
+    <h1>Mélina <span>Galland</span></h1>
+    <p>
+      Étudiante en 3ème année de BUT Techniques de Commercialisation,
+      parcours Marketing Digital, E-commerce et Entrepreneuriat, je construis
+      mon parcours autour du marketing, de la communication digitale, de la stratégie
+      commerciale et de la gestion de projet.
+    </p>
+    <p>
+      Mon objectif post-BUT est d’intégrer un Programme Grande École en école
+      de commerce, notamment à NEOMA Business School ou KEDGE Business School,
+      afin de renforcer mes compétences en management, stratégie marketing et
+      développement commercial.
+    </p>
+    <div class="buttons">
+      <a href="#projet" class="btn btn-primary">Découvrir mon projet</a>
+      <a href="#productions" class="btn btn-secondary">Voir mes productions</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <h2>Profil en quelques mots</h2>
+    <ul>
+      <li>Communication digitale et création de contenu</li>
+      <li>Marketing, événementiel et stratégie de marque</li>
+      <li>Expériences en stage, alternance et projets universitaires</li>
+      <li>Ouverture internationale : Canada, États-Unis, TOEIC 925</li>
+    </ul>
+  </div>
+</section>
+
+<section id="profil">
+  <div class="section-title">
+    <p class="eyebrow">Qui suis-je ?</p>
+    <h2>Un profil orienté marketing, digital et développement commercial</h2>
+    <p>
+      Passionnée par les voyages, la communication, la photographie, le cinéma
+      et la lecture, j’aime comprendre les comportements, raconter une histoire
+      de marque et créer des contenus capables de générer de l’engagement.
+    </p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>925</strong><span>Score TOEIC</span></div>
+    <div class="stat"><strong>+10K</strong><span>Abonnés générés au Choka</span></div>
+    <div class="stat"><strong>+250K</strong><span>Vues générées en stage</span></div>
+    <div class="stat"><strong>2026</strong><span>Objectif PGE</span></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>Ma posture professionnelle</h3>
+      <p>
+        Mon parcours m’a permis de développer une approche concrète du marketing :
+        analyser un besoin, concevoir une action, créer du contenu, mesurer les résultats
+        et ajuster les actions en fonction des performances.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Ce que je souhaite valoriser</h3>
+      <p>
+        À travers ce portfolio, je souhaite montrer ma progression en communication
+        digitale, stratégie commerciale, entrepreneuriat et gestion de projet. Ces
+        compétences sont directement liées à mon projet d’intégrer une école de commerce.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="projet">
+  <div class="section-title">
+    <p class="eyebrow">Projet post-BUT</p>
+    <h2>Intégrer un Programme Grande École en école de commerce</h2>
+    <p>
+      Après mon BUT TC, je souhaite poursuivre mes études en PGE afin d’élargir
+      ma vision stratégique, développer mes compétences managériales et accéder
+      à des responsabilités dans le marketing, la communication ou le développement commercial.
+    </p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>Formations visées</h3>
+      <ul>
+        <li>Programme Grande École — NEOMA Business School</li>
+        <li>Programme Grande École — KEDGE Business School</li>
+        <li>Alternance possible en marketing, communication ou business development</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Pourquoi une école de commerce ?</h3>
+      <p>
+        Une école de commerce représente la suite logique de mon parcours. Elle me
+        permettrait de compléter mes compétences opérationnelles par une approche plus
+        stratégique du management, du marketing, de la finance et du pilotage de projet.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Ce que j’apporte</h3>
+      <p>
+        J’apporte un profil professionnalisé, avec des expériences concrètes en
+        communication digitale, événementiel, relation client et analyse de performance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Compétences à approfondir</h3>
+      <p>
+        Je souhaite renforcer mes compétences en stratégie d’entreprise, management,
+        marketing international, gestion financière et développement commercial.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="section-title">
+    <p class="eyebrow">Parcours</p>
+    <h2>Expériences professionnelles et formation</h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">Septembre 2025 – Septembre 2026</div>
+      <h3>Responsable communication — Groupe Erhart</h3>
+      <p>
+        Alternance au sein d’un groupe concessionnaire de magasins Cuisinella et Schmidt.
+        Création de contenus, campagnes digitales, analyse des performances et soutien
+        aux actions commerciales.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">Avril 2025 – Juin 2025</div>
+      <h3>Community manager — Le Choka, Île de la Réunion</h3>
+      <p>
+        Structuration de la stratégie de communication digitale, gestion des réseaux
+        sociaux, création de contenus, communication événementielle et valorisation
+        de l’image du restaurant.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">Avril 2024 – Mai 2024</div>
+      <h3>Community manager — Domaine du Château Burrus</h3>
+      <p>
+        Valorisation d’un lieu événementiel haut de gamme, coordination d’un shooting
+        d’inspiration, création de contenus et développement de la visibilité du domaine.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2023 – 2026</div>
+      <h3>BUT Techniques de Commercialisation — IUT Robert Schuman</h3>
+      <p>
+        Formation en marketing, négociation, communication, analyse commerciale,
+        digital, e-commerce et entrepreneuriat, avec une spécialisation en MDEE.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">Août 2024 – Décembre 2024</div>
+      <h3>Échange universitaire — CEGEP Garneau, Québec</h3>
+      <p>
+        Semestre d’études au Canada en gestion de commerce, marketing et communication,
+        renforçant mon ouverture internationale et mon adaptabilité.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="productions">
+  <div class="section-title">
+    <p class="eyebrow">Réalisations</p>
+    <h2>Mes productions sélectionnées</h2>
+    <p>
+      J’ai choisi ces productions car elles illustrent des compétences complémentaires :
+      analyse stratégique, entrepreneuriat, gestion d’entreprise, communication digitale,
+      événementiel et valorisation de l’image de marque. Elles sont directement liées
+      à mon projet post-BUT : intégrer un Programme Grande École à NEOMA ou KEDGE.
+    </p>
+  </div>
+
+  <div class="productions">
+
+    <article class="production-card">
+      <div class="production-img">Étude cryptomonnaies</div>
+      <div class="production-content">
+        <span class="tag">Analyse stratégique</span>
+        <h3>Étude sur les opportunités et risques des cryptomonnaies</h3>
+        <p>
+          Cette étude m’a permis d’analyser un marché innovant et complexe, en identifiant
+          ses opportunités économiques, ses risques financiers, ses limites réglementaires
+          et ses impacts sur les entreprises.
+        </p>
+        <p><strong>Compétences mobilisées :</strong> veille, analyse de marché, esprit critique, synthèse.</p>
+        <p><strong>Lien avec mon projet :</strong> cette production montre ma capacité à comprendre des environnements économiques complexes, compétence essentielle en école de commerce.</p>
+        <a class="btn btn-secondary" href="documents/etude-cryptomonnaies.pdf" target="_blank">Voir le document</a>
+      </div>
+    </article>
+
+    <article class="production-card">
+      <div class="production-img">Baguette Box</div>
+      <div class="production-content">
+        <span class="tag">Entrepreneuriat</span>
+        <h3>Baguette Box</h3>
+        <p>
+          Ce projet entrepreneurial m’a permis de construire une offre, de réfléchir
+          à son positionnement, à sa cible et à sa stratégie de commercialisation.
+        </p>
+        <p><strong>Compétences mobilisées :</strong> étude de cible, proposition de valeur, stratégie marketing, créativité.</p>
+        <p><strong>Lien avec mon projet :</strong> ce projet illustre mon intérêt pour l’entrepreneuriat, l’innovation commerciale et la création de valeur.</p>
+        <a class="btn btn-secondary" href="documents/baguette-box.pdf" target="_blank">Voir le document</a>
+      </div>
+    </article>
+
+    <article class="production-card">
+      <div class="production-img">Alpha Metrix</div>
+      <div class="production-content">
+        <span class="tag">Jeu d’entreprise</span>
+        <h3>Jeu d’entreprise — Alpha Metrix</h3>
+        <p>
+          Le jeu d’entreprise Alpha Metrix m’a placée dans une situation proche de la réalité
+          professionnelle. J’ai dû analyser des données, prendre des décisions commerciales,
+          marketing et financières, tout en tenant compte d’un environnement concurrentiel.
+        </p>
+        <p><strong>Compétences mobilisées :</strong> prise de décision, analyse de données, travail en équipe, gestion commerciale.</p>
+        <p><strong>Lien avec mon projet :</strong> cette production démontre ma capacité à raisonner comme une future manager et à adopter une posture stratégique.</p>
+        <a class="btn btn-secondary" href="documents/alpha-metrix.pdf" target="_blank">Voir le document</a>
+      </div>
+    </article>
+
+    <article class="production-card">
+      <div class="production-img">Rapport de stage</div>
+      <div class="production-content">
+        <span class="tag">Expérience professionnelle</span>
+        <h3>Rapport de stage — Le Choka, Île de la Réunion</h3>
+        <p>
+          Ce rapport présente mon stage de deuxième année réalisé au restaurant Le Choka,
+          à l’île de la Réunion. J’y ai participé à la structuration de la stratégie
+          de communication digitale, à la création de contenus, à la gestion des réseaux
+          sociaux et à la valorisation de l’image du restaurant.
+        </p>
+        <p><strong>Compétences mobilisées :</strong> communication digitale, stratégie de contenu, événementiel, relation client, analyse des performances.</p>
+        <p><strong>Lien avec mon projet :</strong> cette expérience montre ma capacité à être autonome, à prendre des responsabilités et à générer des résultats concrets.</p>
+        <a class="btn btn-secondary" href="documents/rapport-de-stage-melina.pdf" target="_blank">Voir le document</a>
+      </div>
+    </article>
+
+    <article class="production-card">
+      <div class="production-img">Château Burrus</div>
+      <div class="production-content">
+        <span class="tag">Communication événementielle</span>
+        <h3>Shooting photo — Château Burrus</h3>
+        <p>
+          Cette production présente un shooting photo réalisé au Domaine du Château Burrus,
+          dans le cadre de la valorisation d’un lieu événementiel haut de gamme. Ce projet
+          m’a permis de coordonner une mise en scène, de travailler avec des prestataires
+          et de renforcer l’identité visuelle du domaine.
+        </p>
+        <p><strong>Compétences mobilisées :</strong> coordination de projet, communication visuelle, branding, événementiel, sens esthétique.</p>
+        <p><strong>Lien avec mon projet :</strong> cette réalisation illustre ma capacité à valoriser une marque et à construire une image cohérente, compétence utile en marketing et communication.</p>
+        <a class="btn btn-secondary" href="documents/chateau-burrus.pdf" target="_blank">Voir le document</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="competences">
+  <div class="section-title">
+    <p class="eyebrow">Compétences</p>
+    <h2>Les compétences que je souhaite mettre au service de mon projet</h2>
+    <p>
+      Ces compétences ont été développées à travers mes expériences professionnelles,
+      mes projets universitaires et mes engagements personnels.
+    </p>
+  </div>
+
+  <div class="skills">
+    <div class="skill-card">
+      <h3>Marketing & stratégie</h3>
+      <div class="skill-list">
+        <span class="pill">Analyse de marché</span>
+        <span class="pill">Positionnement</span>
+        <span class="pill">Plan d’action</span>
+        <span class="pill">Veille concurrentielle</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Communication digitale</h3>
+      <div class="skill-list">
+        <span class="pill">Community management</span>
+        <span class="pill">Création de contenu</span>
+        <span class="pill">Réseaux sociaux</span>
+        <span class="pill">Canva</span>
+        <span class="pill">CapCut</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Commercial & relation client</h3>
+      <div class="skill-list">
+        <span class="pill">Relation client</span>
+        <span class="pill">Argumentation</span>
+        <span class="pill">Négociation</span>
+        <span class="pill">Sens du service</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Gestion de projet</h3>
+      <div class="skill-list">
+        <span class="pill">Organisation</span>
+        <span class="pill">Coordination</span>
+        <span class="pill">Autonomie</span>
+        <span class="pill">Travail en équipe</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Analyse & performance</h3>
+      <div class="skill-list">
+        <span class="pill">KPI</span>
+        <span class="pill">Reporting</span>
+        <span class="pill">Analyse de résultats</span>
+        <span class="pill">Optimisation</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>International & ouverture</h3>
+      <div class="skill-list">
+        <span class="pill">Anglais TOEIC 925</span>
+        <span class="pill">Mobilité Canada</span>
+        <span class="pill">Séjour USA</span>
+        <span class="pill">Adaptabilité</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <div>
+      <h2>Me contacter</h2>
+      <p>
+        Je suis disponible pour échanger autour de mon parcours, de mon projet post-BUT,
+        d’une poursuite d’études en école de commerce ou d’une opportunité en marketing,
+        communication ou développement commercial.
+      </p>
+    </div>
+
+    <div class="contact-details">
+      <div><strong>Email :</strong> melina.galland.pro@gmail.com</div>
+      <div><strong>Téléphone :</strong> 07.81.96.04.12</div>
+      <div><strong>Localisation :</strong> Strasbourg, France</div>
+      <div><strong>Formation :</strong> BUT TC · MDEE · IUT Robert Schuman</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 — Portfolio de Mélina Galland · BUT TC parcours MDEE · Projet PGE en école de commerce</p>
+</footer>
+
+</body>
+</html>
